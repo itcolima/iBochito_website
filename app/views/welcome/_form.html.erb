@@ -1,0 +1,14 @@
+<% if @movement.errors.any? %>
+<ul>
+	<% @movement.errors.full_messages.each do |mensajes|%>
+	<li><%= mensajes%></li>
+	<% end %>
+</ul>
+<% end %> 
+<%= form_for @movement do |f| %>
+<%= f.label :quantity %>
+<%= f.text_field :quantity %>
+<br />
+<%= f.submit "Guardar"%>
+
+<% end %>

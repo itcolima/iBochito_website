@@ -1,5 +1,52 @@
 <!--<h1>Welcome#index</h1>-->
 <!--<p>Find me in app/views/welcome/index.html.erb</p-->
+
 <% if user_signed_in? %>
-	<p>	Bienvenidooo!!!!! <%= current_user.email%></p>
+<p>Pagina Principal</p>
+
+	<p class="text-primary">	Bienvenidooo!!!!! <%= current_user.email%></p>
+	
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+<div id="movements-catalog" class="panel panel-default">
+
+<div class="panel-heading"> Catálogo De Movimientos </div>
+	<table class="table">
+		<th>Nombre</th>
+		<th>Descripción</th>
+		<% @movementcatalogs.each do |m| %>
+		<tr>
+		<td><%=	 m.name	%>	</td>
+		<td> <%= m.description %></td>
+		</tr>
+		<% end %>
+	</table>
+
+</div>
+
+<%= render "form" %>
+
+<div id="movements-select" class="panel panel-default">
+		<div class="panel-heading">Movimientos Seleccionados</div>
+		<table class="table">
+			<th>Id</th>
+			<th>Nombre </th>
+			<th>Cantidad</th>
+		<% @movementls.each do |m2| %>
+		<tr>
+		<td> <%=  m2.id %></td>
+		<td><%=	 m2.name	%>	</td>
+		<td> <%= m2.quantity %></td>
+		</tr>
+		<% end %>
+	</table>
+	</div>
+
 <%end%>
