@@ -28,20 +28,19 @@
 		</tr>
 		<% end %>
 	</table>
-
 </div>
-
+<hr />
+<br />
 <%= render "form" %>
-
+<br />
+<hr />
 <div id="movements-select" class="panel panel-default">
 		<div class="panel-heading">Movimientos Seleccionados</div>
 		<table class="table">
-			<th>Id</th>
 			<th>Nombre </th>
 			<th>Cantidad</th>
 		<% @movementls.each do |m2| %>
 		<tr>
-		<td> <%=  m2.id %></td>
 		<td><%=	 m2.name	%>	</td>
 		<td> <%= m2.quantity %></td>
 		</tr>

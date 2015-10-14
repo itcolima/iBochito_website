@@ -6,6 +6,10 @@
 </ul>
 <% end %> 
 <%= form_for @movement do |f| %>
+<%= f.label :movement_catalogs_id %>
+<%= f.text_field :movement_catalogs_id %>
+<br />
+
 <%= f.label :quantity %>
 <%= f.text_field :quantity %>
 <br />
