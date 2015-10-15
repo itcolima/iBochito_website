@@ -9,7 +9,8 @@
 <%= f.label :movement_catalogs_id %>
 <%= f.text_field :movement_catalogs_id %>
 <br />
-
+<%= f.movement_select(:id, MovementCatalog.all, :id, :name, :prompt => 'Select') %>
+<br />
 <%= f.label :quantity %>
 <%= f.text_field :quantity %>
 <br />
