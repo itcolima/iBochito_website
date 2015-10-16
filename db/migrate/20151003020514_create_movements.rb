@@ -5,5 +5,6 @@ class CreateMovements < ActiveRecord::Migration
       t.integer :quantity
       t.timestamps null: false
     end
+    add_foreign_key :movements, :movement_catalogs, column: :movement_catalogs_id
   end
 end
