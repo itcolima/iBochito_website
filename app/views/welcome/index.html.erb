@@ -19,10 +19,12 @@
 
 <div class="panel-heading"> Catálogo De Movimientos </div>
 	<table class="table">
+		<th>ID</th>
 		<th>Nombre</th>
 		<th>Descripción</th>
 		<% @movementcatalogs.each do |m| %>
 		<tr>
+		<td><%=	 m.id	%>	</td>
 		<td><%=	 m.name	%>	</td>
 		<td> <%= m.description %></td>
 		</tr>
